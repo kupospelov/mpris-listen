@@ -1,0 +1,33 @@
+.TH mpris-listen 5
+.SH NAME
+mpris-listen \- The configuration file description
+.P
+.SH DESCRIPTION
+The service searches for the configuration file at
+.B $XDG_CONFIG_HOME/mpris-listen/config.toml
+or at
+.B ~/.config/mpris-listen/config.toml
+in case
+.B $XDG_CONFIG_HOME
+is not set.
+If no user-defined configuration exists, the system-wide configuration stored at
+.B /etc/mpris-listen/config.toml
+is used.
+.PP
+The general parameters are described in the
+.B [player]
+table:
+.TP
+.B name
+The service name must be a valid D-Bus interface name element: a string of ASCII characters "[A-Z][a-z][0-9]_" which does not begin with a digit.
+.PP
+The shell commands are described in the
+.B [commands]
+table:
+.TP
+.B play, pause, playpause, stop, previous, next
+The shell commands to execute on the corresponding events.
+.SH NOTES
+The service does not emit any events, so clients which rely on them may show incorrect or outdated information.
+.SH AUTHORS
+Maintained by Konstantin Pospelov <kupospelov@gmail.com>

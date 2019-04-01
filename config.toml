@@ -1,0 +1,10 @@
+[player]
+name = "echo"
+
+[commands]
+play = "echo play"
+pause = "echo pause"
+playpause = "echo playpause"
+stop = "echo stop"
+previous = "echo prev"
+next = "echo next"

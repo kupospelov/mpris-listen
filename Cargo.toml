@@ -1,0 +1,10 @@
+[package]
+name = "mpris-listen"
+version = "0.1.0"
+authors = ["Konstantin Pospelov <kupospelov@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+dbus = "0.6.4"
+serde = { version = "1.0.89", features = ["derive"] }
+toml = "0.5.0"
